@@ -21,4 +21,4 @@ brew uninstall --cask audaxdm        # add --zap to also remove app data
 ## Notes
 
 - Both Intel (x86_64) and Apple Silicon (arm64) builds are supported; Homebrew picks the matching DMG automatically.
-- The app is not yet signed or notarized. If macOS blocks the first launch, right-click the app and choose Open, or run `xattr -dr com.apple.quarantine "/Applications/Audax Data Manager.app"`.
+- The app is not yet signed or notarized. macOS blocks the first launch. Before opening the app, run `xattr -dr com.apple.quarantine "/Applications/Audax Data Manager.app"`. Alternatively, open the app once, then click "Open Anyway" in System Settings > Privacy & Security.

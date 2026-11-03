@@ -27,8 +27,11 @@ cask "audaxdm" do
   ]
 
   caveats <<~EOS
-    #{token} is not yet signed or notarized. If macOS blocks the first launch,
-    right-click the app and choose Open, or run:
+    #{token} is not yet signed or notarized, so macOS blocks the first launch.
+    Before opening the app, remove the quarantine flag:
       xattr -dr com.apple.quarantine "/Applications/Audax Data Manager.app"
+
+    Alternatively, open the app once, then go to System Settings >
+    Privacy & Security and click "Open Anyway".
   EOS
 end
