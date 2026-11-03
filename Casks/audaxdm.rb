@@ -17,6 +17,8 @@ cask "audaxdm" do
     strategy :github_latest
   end
 
+  depends_on macos: :ventura
+
   app "Audax Data Manager.app"
 
   zap trash: [
